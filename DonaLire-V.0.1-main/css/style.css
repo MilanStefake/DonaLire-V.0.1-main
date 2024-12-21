@@ -1,0 +1,180 @@
+/* Asegura que html y body ocupen toda la altura disponible */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Contenedor principal que usa Flexbox */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Estilo para el navbar fijo */
+nav.navbar {
+    z-index: 1050; /* Asegúrate de que tenga un z-index alto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Contenido principal que ocupará el espacio restante */
+#contenido {
+    flex-grow: 1;
+}
+/* Estilo del Hero Section */
+.hero-section {
+    color: gray;
+    text-align: center;
+    padding: 40px 20px; /* Ajusta el padding superior */
+}
+
+/* Estilo del footer */
+footer {
+    background-color: #343a40; /* Color de fondo oscuro */
+    color: #fff; /* Texto blanco */
+    text-align: center; /* Centrar el texto */
+    padding: 15px; /* Espacio interno */
+    width: 100%; /* Asegura que el footer ocupe todo el ancho */
+    position: relative; /* Asegura que no se vea afectado por otros estilos */
+    bottom: 0; /* Asegura que esté en la parte inferior */
+}
+/* Estilo del botón personalizado */
+.btn-custom {
+    background-color: green; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Eliminar borde */
+    border-radius: 50px; /* Bordes redondeados para un botón ovalado */
+    padding: 12px 40px; /* Padding ajustado para forma ovalada */
+    text-align: center; /* Centrar el texto */
+    display: inline-flex; /* Flexbox para centrar contenido */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar contenido horizontalmente */
+    text-decoration: none; /* Eliminar subrayado */
+    position: relative; /* Necesario para el pseudo-elemento */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
+}
+
+/* Estilo para los enlaces del navbar */
+.navbar-nav .nav-link {
+    color: white; /* Color del texto */
+}
+
+/* Carrusel actualizado */
+.carousel {
+    margin-top: 70px; /* También puedes agregar un margen aquí si el carrusel no se ajusta correctamente */
+    position: relative;
+    width: 100%;
+    max-width: 350px; /* Ajustado para pantallas grandes */
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px; /* Redondeo opcional */
+}
+
+/* Contenedor de las imágenes */
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Imágenes */
+.carousel-images img {
+    width: 100%;
+    height: auto; /* Mantén la proporción natural de las imágenes */
+    object-fit: cover;
+    border-radius: 10px; /* Redondeo */
+}
+
+/* Botones del carrusel */
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 20px;
+    border-radius: 50%; /* Redondeo completo */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    
+}
+
+.prev {
+    left: 15px;
+}
+
+.next {
+    right: 15px;
+}
+
+/* Animaciones para las imágenes (opcional) */
+.carousel-images img {
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Botón de WhatsApp */
+.btn-custom-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #25d366; /* Verde WhatsApp */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px; /* Bordes redondeados */
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.btn-custom-whatsapp i {
+    margin-right: 8px; /* Separación entre el logo y el texto */
+}
+
+.btn-custom-whatsapp:hover {
+    background-color: #1ebe57; /* Color más oscuro al pasar el cursor */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Aumentar sombra */
+}
+
+.btn-custom-whatsapp:active {
+    transform: scale(0.95); /* Efecto de pulsación */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Reducir sombra */
+}
+
+/* Media Queries para Pantallas Pequeñas */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px; /* Reduce el padding en pantallas pequeñas */
+        
+    }
+
+    .carousel {
+        max-width: 100%;
+    }
+
+    .hero-section {
+        padding: 30px 10px; /* Ajusta el padding para pantallas pequeñas */
+    }
+}
+#content {
+    margin-top: 65px; /* Ajusta este valor según la altura de tu navbar */
+    padding: 20px; /* Si deseas algo de padding dentro de tu contenedor */
+}
+#texto-buton {
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en una columna */
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    margin-top: 20px; /* Ajusta según el espaciado que necesites */
+}
